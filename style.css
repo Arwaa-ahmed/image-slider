@@ -1,0 +1,77 @@
+.container{
+    width: 800px;
+    height: 250px;
+    margin: 10px auto;
+    position: relative;
+}
+img{
+    width: 650px;
+    height: 250px;
+    opacity: 0;
+    position: absolute;
+    left: 4rem;
+    transition: opacity 1s;
+    z-index: 1;
+}
+.container img.active{
+    opacity: 1;
+}
+.container .slidenum{
+    background: rgba(0,0,0,.6);
+    color: white;
+    z-index: 2;
+    padding: 5px 10px;
+    font-size: 20px;
+    position: absolute;
+    left: 5rem;
+    top: 5px;
+}
+.control .prev{
+    float: left;
+    padding: 5px;
+}
+.control{
+    margin: auto;
+    width: 600px;
+    color: rgb(2, 17, 30);
+    text-align: center;
+}
+
+
+.control .next{
+    float: right;
+    padding: 5px;
+}
+.control .next,
+.control .prev{
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 20%;
+    cursor: pointer;
+    background: rgb(20, 124, 114);
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 19px;
+}
+.control .nums ul li{
+    background-color: rgb(212, 207, 207);
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.control .nums li.active{
+    background-color:rgb(20, 124, 114) ;
+    color: white;
+}
+.control .prev .disable,
+.control .next .disable{
+    cursor: no-drop;
+}
+.control .nums{
+    width: 55%;
+    float: left;
+}
